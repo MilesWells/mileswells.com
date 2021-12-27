@@ -1,0 +1,20 @@
+html {
+  scroll-padding-top: 80px;
+}
+
+main.container {
+  padding: 0;
+}
+
+main > header {
+  background: var(--background-color);
+  padding: 0;
+  position: sticky;
+  top: 0;
+}
+
+img {
+  height: 56px;
+  margin-bottom: var(--spacing);
+  width: 56px;
+}
