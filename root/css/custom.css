@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
 
@@ -17,4 +18,16 @@ img {
   height: 56px;
   margin-bottom: var(--spacing);
   width: 56px;
+}
+
+#games-grid li {
+  list-style: "🎮";
+}
+
+#music-grid li {
+  list-style: "🎵";
+}
+
+.grid li {
+  padding-left: calc(var(--spacing) / 4);
 }
