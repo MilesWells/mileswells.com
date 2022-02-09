@@ -1,41 +1,31 @@
-# Stencil App Starter
+# Stencil Notes
 
-Stencil is a compiler for building fast web apps using Web Components.
+## Shadow DOM
 
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
+    - Creates an encapsulated DOM tree inside of a given DOM node that also encapsulates any styles
+    - "light" DOM = regular DOM
+    - Best practice is to ALWAYS use `@Component({ shadow: true })` since encapsulation via shadow DOM is part of Web Component standards
+    - Use `:host` to select the host element when using shadow DOM
+    - Use `@Element.shadowRoot.querySelector` to traverse and manipulate shadow DOM
+    - `scoped` is a proxy for style encapsulation. It works by adding a `data-` attribute to make the component unique in the DOM. This does not prevent light DOM styles from affecting the component.
+    - Probably don't use `scoped` for anything
+    - Use `::part` pseudo-element to expose pieces of a component for custom styling outside the component
 
-Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is certainly not required.
+## Components
 
-Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
+    - JS class w/ `@Component` decorator
+    - No imports for nesting components since they're just HTML tags
+    - Lifecycle: https://stenciljs.com/docs/component-lifecycle
+    - Deepest components load first, then `componentDidLoad` bubbles up
 
-## Getting Started
+### Props and State
 
-To start a new project using Stencil, clone this repo to a new directory:
-
-```bash
-npm init stencil app
-```
-
-and run:
-
-```bash
-npm start
-```
-
-To build the app for production, run:
-
-```bash
-npm run build
-```
-
-To run the unit tests once, run:
-
-```
-npm test
-```
-
-To run the unit tests and watch for file changes during development, run:
-
-```
-npm run test.watch
-```
+    - User-defined types must be exported somewhere, even if the type is in the same file as the component. This is so stencil knows the type when passing props down from parent components.
+    - All props are immutable by default and are required to be controlled by parent components
+    - A prop can be reflected into the DOM via an attribute on the DOM node if the value of the prop is needed to manipulate or traverse the DOM in some way
+    - Component class members with the `@State` decorator are internal to the component. They are mutable and will cause a rerender when changed
+    - Best practice for internal data is to avoid using `@State` unless you know for sure the value changing should cause a rerender
+    - Use `<Host>` Component similar to React `<Fragment>` (or `<></>` if you're used to that syntax)
+    - `<Host>` is a virtual component but can be used to set attributes and event listeners to the host element
+    - Use the `@Element` decorator to get access to the host element in the class code
+    - Stencil only compares references and will not rerender when an object or array is mutated

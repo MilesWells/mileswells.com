@@ -1,0 +1,12 @@
+a {
+  $transition: 0.3s ease-in-out;
+
+  color: $link-color;
+  text-decoration: none;
+  transition: color $transition, text-decoration $transition;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../common-styles/variables';
+
+html {
+  background-color: $background-color;
+
+  color: $color;
+  font-family: Roboto, 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: $header-height;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0 calc($spacing * 4);
+}
+
+@media (min-width: 992px) {
+  main {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}

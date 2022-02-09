@@ -1,0 +1,27 @@
+@import '../../common-styles/variables';
+@import '../../common-styles/links';
+
+nav,
+nav ul {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+  & ul {
+    align-items: center;
+    list-style-type: none;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  & li {
+    display: inline-block;
+    padding: $spacing calc($spacing / 2);
+  }
+}

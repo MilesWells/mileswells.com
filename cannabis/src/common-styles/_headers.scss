@@ -1,0 +1,37 @@
+h1,
+h3,
+h4 {
+  color: $color;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: calc(2 * $font-size);
+  margin-bottom: calc(3 * $spacing);
+}
+
+h3 {
+  $font-size: calc(1.5 * $font-size);
+  margin-bottom: $spacing;
+}
+
+h4 {
+  font-size: calc(1.25 * $font-size);
+  margin-bottom: calc(1.875 * $font-size);
+}
+
+hgroup {
+  margin-bottom: calc($spacing * 1.5);
+
+  & > * {
+    margin-bottom: 0;
+  }
+
+  & > :last-child {
+    color: $muted-color;
+
+    font-weight: initial;
+    font-size: unset;
+  }
+}
