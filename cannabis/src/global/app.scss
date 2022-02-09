@@ -20,9 +20,9 @@ main {
   margin: 0 calc($spacing * 4);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1001px) {
   main {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
   }
 }

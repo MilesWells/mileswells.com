@@ -19,6 +19,9 @@ export class NavBar {
           <li>
             <a href="#About">About</a>
           </li>
+          <li>
+            <a href="#About">Current Grow</a>
+          </li>
         </ul>
       </nav>
     );
