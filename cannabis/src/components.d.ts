@@ -5,8 +5,16 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { JSX } from "@stencil/core";
 export namespace Components {
     interface AppRoot {
+    }
+    interface GrowDayEntry {
+        "additionalPhotos": string[];
+        "article": JSX.Element;
+        "date": string;
+    }
+    interface GrowJackHerer {
     }
     interface NavBar {
     }
@@ -18,6 +26,18 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLGrowDayEntryElement extends Components.GrowDayEntry, HTMLStencilElement {
+    }
+    var HTMLGrowDayEntryElement: {
+        prototype: HTMLGrowDayEntryElement;
+        new (): HTMLGrowDayEntryElement;
+    };
+    interface HTMLGrowJackHererElement extends Components.GrowJackHerer, HTMLStencilElement {
+    }
+    var HTMLGrowJackHererElement: {
+        prototype: HTMLGrowJackHererElement;
+        new (): HTMLGrowJackHererElement;
+    };
     interface HTMLNavBarElement extends Components.NavBar, HTMLStencilElement {
     }
     var HTMLNavBarElement: {
@@ -26,16 +46,27 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
+        "grow-day-entry": HTMLGrowDayEntryElement;
+        "grow-jack-herer": HTMLGrowJackHererElement;
         "nav-bar": HTMLNavBarElement;
     }
 }
 declare namespace LocalJSX {
     interface AppRoot {
     }
+    interface GrowDayEntry {
+        "additionalPhotos"?: string[];
+        "article"?: JSX.Element;
+        "date"?: string;
+    }
+    interface GrowJackHerer {
+    }
     interface NavBar {
     }
     interface IntrinsicElements {
         "app-root": AppRoot;
+        "grow-day-entry": GrowDayEntry;
+        "grow-jack-herer": GrowJackHerer;
         "nav-bar": NavBar;
     }
 }
@@ -44,6 +75,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "grow-day-entry": LocalJSX.GrowDayEntry & JSXBase.HTMLAttributes<HTMLGrowDayEntryElement>;
+            "grow-jack-herer": LocalJSX.GrowJackHerer & JSXBase.HTMLAttributes<HTMLGrowJackHererElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
         }
     }

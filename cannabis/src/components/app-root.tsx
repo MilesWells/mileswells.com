@@ -11,7 +11,7 @@ export class AppRoot {
         <nav-bar />
         <stencil-router>
           <stencil-route-switch>
-            <stencil-route url="/" component="div" exact={true} />
+            <stencil-route url="/" component="grow-jack-herer" exact={true} />
           </stencil-route-switch>
         </stencil-router>
       </Host>

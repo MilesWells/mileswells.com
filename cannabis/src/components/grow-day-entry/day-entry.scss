@@ -1,0 +1,18 @@
+@import '../../common-styles/variables';
+
+article {
+  background-color: $primary-shaded;
+  border: thin solid $muted-color;
+  border-radius: $spacing;
+  padding: $spacing;
+}
+
+.container {
+  display: flex;
+  gap: $spacing;
+
+  .thumbnails {
+    display: flex;
+    gap: $spacing;
+  }
+}

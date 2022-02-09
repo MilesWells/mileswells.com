@@ -15,9 +15,5 @@ export const config: Config = {
       baseUrl: 'https://myapp.local/',
     },
   ],
-  plugins: [
-    sass({
-      injectGlobalPaths: ['src/global/variables.scss'],
-    }),
-  ],
+  plugins: [sass()],
 };
