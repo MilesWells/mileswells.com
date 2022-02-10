@@ -13,7 +13,13 @@ export class JackHerer {
 
     return (
       <Host>
-        <h3>Jack Herer</h3>
+        <p>
+          <a href="https://www.leafly.com/strains/jack-herer" target="_blank">
+            Jack Herer
+          </a>{' '}
+          is a sativa-dominant strain of cannabis created in the Neatherlands in the mid 1990's by Sensi Seeds. The name is an Honorarium of a man by the same name who was a
+          pro-cannabis activist active mainly in the 1970's. It's advertise as having a flowering time of 50-70 days.
+        </p>
         <div class="article-container">
           {dates.map(date => (
             <grow-day-entry basePath={basePath} date={date} article={content[date].article} additionalPhotos={content[date].additionalPhotos} />
@@ -125,7 +131,7 @@ const content: {
         <p>
           The plant that was further along was certianly ready to go. I couldn't get any clear photos using my USB microscope but the tricombs were nice and cloudy! This plant
           could definitely have gone on longer, though. There weren't any amber tricombs, which to me is a good thing, but there were still some tricombs that lacked the milkiness
-          you'd expect from prime harvest time.
+          you'd expect from prime harvest time. But I'm lazy and wanted to cut it all down at once! We'll see if I regret that!
         </p>
       </Fragment>
     ),

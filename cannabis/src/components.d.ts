@@ -9,6 +9,8 @@ import { JSX } from "@stencil/core";
 export namespace Components {
     interface AppRoot {
     }
+    interface GrowAbout {
+    }
     interface GrowDayEntry {
         "additionalPhotos": string[];
         "article": JSX.Element;
@@ -26,6 +28,12 @@ declare global {
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
+    };
+    interface HTMLGrowAboutElement extends Components.GrowAbout, HTMLStencilElement {
+    }
+    var HTMLGrowAboutElement: {
+        prototype: HTMLGrowAboutElement;
+        new (): HTMLGrowAboutElement;
     };
     interface HTMLGrowDayEntryElement extends Components.GrowDayEntry, HTMLStencilElement {
     }
@@ -47,6 +55,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
+        "grow-about": HTMLGrowAboutElement;
         "grow-day-entry": HTMLGrowDayEntryElement;
         "grow-jack-herer": HTMLGrowJackHererElement;
         "nav-bar": HTMLNavBarElement;
@@ -54,6 +63,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AppRoot {
+    }
+    interface GrowAbout {
     }
     interface GrowDayEntry {
         "additionalPhotos"?: string[];
@@ -67,6 +78,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "app-root": AppRoot;
+        "grow-about": GrowAbout;
         "grow-day-entry": GrowDayEntry;
         "grow-jack-herer": GrowJackHerer;
         "nav-bar": NavBar;
@@ -77,6 +89,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "grow-about": LocalJSX.GrowAbout & JSXBase.HTMLAttributes<HTMLGrowAboutElement>;
             "grow-day-entry": LocalJSX.GrowDayEntry & JSXBase.HTMLAttributes<HTMLGrowDayEntryElement>;
             "grow-jack-herer": LocalJSX.GrowJackHerer & JSXBase.HTMLAttributes<HTMLGrowJackHererElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;

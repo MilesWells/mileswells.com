@@ -17,10 +17,10 @@ export class NavBar {
 
         <ul>
           <li>
-            <a href="#About">About</a>
+            <stencil-route-link url="/">About</stencil-route-link>
           </li>
           <li>
-            <a href="#About">Current Grow</a>
+            <stencil-route-link url="/grow/jack-herer">Current Grow</stencil-route-link>
           </li>
         </ul>
       </nav>
