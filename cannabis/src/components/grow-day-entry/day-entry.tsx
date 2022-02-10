@@ -1,13 +1,13 @@
-import { Component, h, Prop, JSX, getAssetPath } from '@stencil/core';
+import { Component, h, Prop, JSX } from '@stencil/core';
 import moment from 'moment';
 
 @Component({
   tag: 'grow-day-entry',
   shadow: true,
-  assetsDirs: ['assets'],
   styleUrl: './day-entry.scss',
 })
 export class DayEntry {
+  @Prop() basePath: string;
   @Prop() date: string;
   @Prop() article: JSX.Element;
   @Prop() additionalPhotos: string[] = [];
@@ -15,7 +15,7 @@ export class DayEntry {
   render() {
     const timestamp = moment(this.date, 'YYYY_MM_DD').format('MMMM Do, YYYY');
 
-    const thumbnailPaths = [buildThumbnailpath(this.date)(), ...this.additionalPhotos.map(buildThumbnailpath(this.date))];
+    const thumbnailPaths = [buildThumbnailpath(this.date, this.basePath)(), ...this.additionalPhotos.map(buildThumbnailpath(this.date, this.basePath))];
 
     return (
       <article>
@@ -33,4 +33,4 @@ export class DayEntry {
   }
 }
 
-const buildThumbnailpath = (date: string) => (part?: string) => getAssetPath(`./assets/thumbnails/${date}${part ?? ''}_tn.jpg`);
+const buildThumbnailpath = (date: string, basePath: string) => (part?: string) => `${basePath}/thumbnails/${date}${part ?? ''}_tn.jpg`;

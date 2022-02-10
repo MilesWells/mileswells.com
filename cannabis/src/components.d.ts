@@ -12,6 +12,7 @@ export namespace Components {
     interface GrowDayEntry {
         "additionalPhotos": string[];
         "article": JSX.Element;
+        "basePath": string;
         "date": string;
     }
     interface GrowJackHerer {
@@ -57,6 +58,7 @@ declare namespace LocalJSX {
     interface GrowDayEntry {
         "additionalPhotos"?: string[];
         "article"?: JSX.Element;
+        "basePath"?: string;
         "date"?: string;
     }
     interface GrowJackHerer {
