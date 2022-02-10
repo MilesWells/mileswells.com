@@ -19,14 +19,14 @@ export class DayEntry {
 
     return (
       <article>
-        <h4>{timestamp}</h4>
+        <span class="timestamp">{timestamp}</span>
         <div class="container">
           <div class="thumbnails">
             {thumbnailPaths.map(path => (
               <img src={path} />
             ))}
           </div>
-          {this.article}
+          <section>{this.article}</section>
         </div>
       </article>
     );

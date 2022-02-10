@@ -7,12 +7,31 @@ article {
   padding: $spacing;
 }
 
+.timestamp {
+  border-bottom: solid $color thin;
+  font-size: calc(1.25 * $font-size);
+}
+
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   gap: $spacing;
+  margin-top: $spacing;
 
   .thumbnails {
-    display: flex;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: $spacing;
+  }
+
+  section {
+    border-left: solid $muted-color thick;
+    color: $secondary;
+    padding-left: 20px;
+
+    p {
+      margin-top: 0px;
+    }
   }
 }
