@@ -9,6 +9,12 @@ export class Modal {
   @Prop() isOpen: boolean;
   @Prop() handleClose: () => void;
 
+  constructor() {
+    window.addEventListener('keydown', ev => {
+      if (ev.key === 'Escape') this.handleClose();
+    });
+  }
+
   render() {
     if (!this.isOpen) return null;
 
@@ -20,6 +26,9 @@ export class Modal {
         }}
       >
         <div class="modal-content">
+          <div class="close-btn" onClick={this.handleClose}>
+            Close
+          </div>
           <slot />
         </div>
       </div>

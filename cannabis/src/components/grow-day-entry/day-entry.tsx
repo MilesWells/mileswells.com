@@ -11,22 +11,22 @@ export class DayEntry {
   @Prop() date: string;
   @Prop() article: JSX.Element;
   @Prop() additionalPhotos: string[] = [];
-  @Prop() handleThumbnailClick: () => void;
+  @Prop() handleThumbnailClick: (fullSizePath: string) => void;
 
   render() {
     const timestamp = moment(this.date, 'YYYY_MM_DD').format('MMMM Do, YYYY');
 
-    const thumbnailPaths = [buildThumbnailPath(this.date, this.basePath), ...this.additionalPhotos.map(part => buildThumbnailPath(this.date, this.basePath, part))].map(
-      tn => `${tn}.jpg`,
-    );
+    const parts = [undefined, ...this.additionalPhotos];
+    const paths = parts.map(part => buildPath(this.date, this.basePath, part));
+    const thumbnailPaths = parts.map(part => buildThumbnailPaths(this.date, this.basePath, part));
 
     return (
       <article>
         <span class="timestamp">{timestamp}</span>
         <div class="container">
-          <div class="thumbnails" onClick={this.handleThumbnailClick}>
-            {thumbnailPaths.map(path => (
-              <img src={path} />
+          <div class="thumbnails">
+            {thumbnailPaths.map((path, idx) => (
+              <img onClick={() => this.handleThumbnailClick(paths[idx])} src={path} />
             ))}
           </div>
           <section>{this.article}</section>
@@ -36,5 +36,5 @@ export class DayEntry {
   }
 }
 
-const buildPath = (date: string, basePath: string, part?: string) => `${basePath}/thumbnails/${date}${part ?? ''}`;
-const buildThumbnailPath = (date: string, basePath: string, part?: string) => `${buildPath(date, basePath, part)}_tn`;
+const buildPath = (date: string, basePath: string, part?: string) => `${basePath}/${date}${part ?? ''}.JPG`;
+const buildThumbnailPaths = (date: string, basePath: string, part?: string) => `${basePath}/thumbnails/${date}${part ?? ''}_tn.jpg`;

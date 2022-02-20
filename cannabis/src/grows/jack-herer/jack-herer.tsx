@@ -8,6 +8,7 @@ import { Component, h, Host, JSX, getAssetPath, Fragment, State } from '@stencil
 })
 export class JackHerer {
   @State() modalOpen = false;
+  @State() modalPhotoPath: string;
 
   render() {
     const dates = Object.keys(content);
@@ -15,8 +16,14 @@ export class JackHerer {
 
     return (
       <Host>
-        <grow-modal isOpen={this.modalOpen} handleClose={() => (this.modalOpen = false)}>
-          Test
+        <grow-modal
+          isOpen={this.modalOpen}
+          handleClose={() => {
+            this.modalOpen = false;
+            this.modalPhotoPath = undefined;
+          }}
+        >
+          <img class="modal-photo" src={this.modalPhotoPath} />
         </grow-modal>
         <div class="blurb">
           <a href="https://www.leafly.com/strains/jack-herer" target="_blank">
@@ -34,7 +41,10 @@ export class JackHerer {
               article={content[date].article}
               basePath={basePath}
               date={date}
-              handleThumbnailClick={() => (this.modalOpen = true)}
+              handleThumbnailClick={path => {
+                this.modalPhotoPath = path;
+                this.modalOpen = true;
+              }}
             />
           ))}
         </div>

@@ -17,10 +17,13 @@ article {
   margin-top: $spacing;
 
   .thumbnails {
-    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $spacing;
+
+    img {
+      cursor: pointer;
+    }
   }
 
   section {

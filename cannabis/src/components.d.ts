@@ -18,7 +18,7 @@ export namespace Components {
         "article": JSX.Element;
         "basePath": string;
         "date": string;
-        "handleThumbnailClick": () => void;
+        "handleThumbnailClick": (fullSizePath: string) => void;
     }
     interface GrowJackHerer {
     }
@@ -94,7 +94,7 @@ declare namespace LocalJSX {
         "article"?: JSX.Element;
         "basePath"?: string;
         "date"?: string;
-        "handleThumbnailClick"?: () => void;
+        "handleThumbnailClick"?: (fullSizePath: string) => void;
     }
     interface GrowJackHerer {
     }

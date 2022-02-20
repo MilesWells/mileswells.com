@@ -2,6 +2,9 @@
 @import '../../common-styles/mixins';
 
 .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,9 +14,14 @@
 }
 
 .modal-content {
-  background-color: $primary-shaded;
-  border-radius: $spacing;
-  margin: 15% auto;
-  padding: $spacing;
-  width: 80%;
+  height: 90%;
+
+  .close-btn {
+    background-color: black;
+    border-radius: $spacing;
+    cursor: pointer;
+    margin: $spacing;
+    padding: $spacing / 3;
+    position: absolute;
+  }
 }
