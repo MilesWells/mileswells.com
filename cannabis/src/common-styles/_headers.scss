@@ -7,22 +7,22 @@ h4 {
 }
 
 h1 {
-  font-size: calc(2 * $font-size);
-  margin-bottom: calc(3 * $spacing);
+  font-size: 2 * $font-size;
+  margin-bottom: 3 * $spacing;
 }
 
 h3 {
-  $font-size: calc(1.5 * $font-size);
+  $font-size: 1.5 * $font-size;
   margin-bottom: $spacing;
 }
 
 h4 {
-  font-size: calc(1.25 * $font-size);
-  margin-bottom: calc(1.25 * $spacing);
+  font-size: 1.25 * $font-size;
+  margin-bottom: 1.25 * $spacing;
 }
 
 hgroup {
-  margin-bottom: calc($spacing * 1.5);
+  margin-bottom: $spacing * 1.5;
 
   & > * {
     margin-bottom: 0;

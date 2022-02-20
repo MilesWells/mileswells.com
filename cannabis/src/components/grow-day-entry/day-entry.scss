@@ -7,7 +7,7 @@ article {
 
 .timestamp {
   border-bottom: solid $color thin;
-  font-size: calc(1.25 * $font-size);
+  font-size: 1.25 * $font-size;
 }
 
 .container {

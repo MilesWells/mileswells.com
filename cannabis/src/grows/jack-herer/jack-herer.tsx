@@ -13,13 +13,15 @@ export class JackHerer {
 
     return (
       <Host>
-        <p>
+        <div class="blurb">
           <a href="https://www.leafly.com/strains/jack-herer" target="_blank">
             Jack Herer
-          </a>{' '}
-          is a sativa-dominant strain of cannabis created in the Neatherlands in the mid 1990's by Sensi Seeds. The name is an honorarium of a man by the same name who was a
-          pro-cannabis activist who was active mainly in the 1970's. Jack Herer's advertised flowering time is 50-70 days.
-        </p>
+          </a>
+          <p>
+            A sativa-dominant strain of cannabis created in the Neatherlands in the mid 1990's by Sensi Seeds. The name is an honorarium of a man by the same name who was a
+            pro-cannabis activist who was active mainly in the 1970's. Jack Herer's advertised flowering time is 50-70 days.
+          </p>
+        </div>
         <div class="article-container">
           {dates.map(date => (
             <grow-day-entry basePath={basePath} date={date} article={content[date].article} additionalPhotos={content[date].additionalPhotos} />
@@ -121,7 +123,7 @@ const content: {
     additionalPhotos: ['(2)', '(3)', '(5)', '(6)', '(7)', '(8)', '(10)', '(11)'],
     article: (
       <Fragment>
-        <h5>Early harvest =(</h5>
+        <h5>Early harvest after 44 days of flowering =(</h5>
         <p>
           The plant in front started to yellow on the fan leaves starting at the top of the plant. This is indicitive of potassium deficiency. I was either too late or there were
           additional problems because the yellowing didn't stop after changing out the reservoir with some fresh food with extra potassium. The yellowing started to get too close
@@ -129,9 +131,9 @@ const content: {
           fine and just a little weaker than the other plant!
         </p>
         <p>
-          The plant that was further along was certianly ready to go. I couldn't get any clear photos using my USB microscope but the tricombs were nice and cloudy! This plant
-          could definitely have gone on longer, though. There weren't any amber tricombs, which to me is a good thing, but there were still some tricombs that lacked the milkiness
-          you'd expect from prime harvest time. But I'm lazy and wanted to cut it all down at once! We'll see if I regret that!
+          The plant that was further along was theoretically ready to go after 52 days of flowering. I couldn't get any clear photos using my USB microscope but the tricombs were
+          nice and cloudy! This plant could definitely have gone on longer, though. There weren't any amber tricombs, which to me is a good thing, but there were still some
+          tricombs that lacked the milkiness you'd expect from prime harvest time. But I'm lazy and wanted to cut it all down at once! We'll see if I regret that!
         </p>
       </Fragment>
     ),

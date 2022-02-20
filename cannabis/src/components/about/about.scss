@@ -1,5 +1,10 @@
 @import '../../common-styles/variables';
+@import '../../common-styles/mixins';
 @import '../../common-styles/links';
+
+div {
+  @include card();
+}
 
 a {
   text-decoration: underline;

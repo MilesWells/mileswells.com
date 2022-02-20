@@ -1,9 +1,16 @@
 @import '../../common-styles/variables';
+@import '../../common-styles/mixins';
 @import '../../common-styles/headers';
 @import '../../common-styles/links';
 
 a {
+  font-size: $font-size * 2;
   text-decoration: underline;
+}
+
+.blurb {
+  @include card();
+  margin-bottom: $spacing;
 }
 
 .article-container {

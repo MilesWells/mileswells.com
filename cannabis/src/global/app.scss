@@ -17,7 +17,7 @@ body {
 }
 
 main {
-  margin: 0 calc($spacing * 4);
+  margin: 0 ($spacing * 4);
 }
 
 @media (min-width: 1001px) {
