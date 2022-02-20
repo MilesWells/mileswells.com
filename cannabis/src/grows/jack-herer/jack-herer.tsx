@@ -23,7 +23,7 @@ export class JackHerer {
             this.modalPhotoPath = undefined;
           }}
         >
-          <img class="modal-photo" src={this.modalPhotoPath} />
+          <img class="modal-photo" src={this.modalPhotoPath} onClick={() => window.open(this.modalPhotoPath, '_blank').focus()} />
         </grow-modal>
         <div class="blurb">
           <a href="https://www.leafly.com/strains/jack-herer" target="_blank">
