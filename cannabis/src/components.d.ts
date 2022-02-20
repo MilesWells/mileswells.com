@@ -18,8 +18,13 @@ export namespace Components {
         "article": JSX.Element;
         "basePath": string;
         "date": string;
+        "handleThumbnailClick": () => void;
     }
     interface GrowJackHerer {
+    }
+    interface GrowModal {
+        "handleClose": () => void;
+        "isOpen": boolean;
     }
     interface NavBar {
     }
@@ -55,6 +60,12 @@ declare global {
         prototype: HTMLGrowJackHererElement;
         new (): HTMLGrowJackHererElement;
     };
+    interface HTMLGrowModalElement extends Components.GrowModal, HTMLStencilElement {
+    }
+    var HTMLGrowModalElement: {
+        prototype: HTMLGrowModalElement;
+        new (): HTMLGrowModalElement;
+    };
     interface HTMLNavBarElement extends Components.NavBar, HTMLStencilElement {
     }
     var HTMLNavBarElement: {
@@ -67,6 +78,7 @@ declare global {
         "grow-costs": HTMLGrowCostsElement;
         "grow-day-entry": HTMLGrowDayEntryElement;
         "grow-jack-herer": HTMLGrowJackHererElement;
+        "grow-modal": HTMLGrowModalElement;
         "nav-bar": HTMLNavBarElement;
     }
 }
@@ -82,8 +94,13 @@ declare namespace LocalJSX {
         "article"?: JSX.Element;
         "basePath"?: string;
         "date"?: string;
+        "handleThumbnailClick"?: () => void;
     }
     interface GrowJackHerer {
+    }
+    interface GrowModal {
+        "handleClose"?: () => void;
+        "isOpen"?: boolean;
     }
     interface NavBar {
     }
@@ -93,6 +110,7 @@ declare namespace LocalJSX {
         "grow-costs": GrowCosts;
         "grow-day-entry": GrowDayEntry;
         "grow-jack-herer": GrowJackHerer;
+        "grow-modal": GrowModal;
         "nav-bar": NavBar;
     }
 }
@@ -105,6 +123,7 @@ declare module "@stencil/core" {
             "grow-costs": LocalJSX.GrowCosts & JSXBase.HTMLAttributes<HTMLGrowCostsElement>;
             "grow-day-entry": LocalJSX.GrowDayEntry & JSXBase.HTMLAttributes<HTMLGrowDayEntryElement>;
             "grow-jack-herer": LocalJSX.GrowJackHerer & JSXBase.HTMLAttributes<HTMLGrowJackHererElement>;
+            "grow-modal": LocalJSX.GrowModal & JSXBase.HTMLAttributes<HTMLGrowModalElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;
         }
     }

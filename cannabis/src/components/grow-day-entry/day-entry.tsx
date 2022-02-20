@@ -11,6 +11,7 @@ export class DayEntry {
   @Prop() date: string;
   @Prop() article: JSX.Element;
   @Prop() additionalPhotos: string[] = [];
+  @Prop() handleThumbnailClick: () => void;
 
   render() {
     const timestamp = moment(this.date, 'YYYY_MM_DD').format('MMMM Do, YYYY');
@@ -23,7 +24,7 @@ export class DayEntry {
       <article>
         <span class="timestamp">{timestamp}</span>
         <div class="container">
-          <div class="thumbnails">
+          <div class="thumbnails" onClick={this.handleThumbnailClick}>
             {thumbnailPaths.map(path => (
               <img src={path} />
             ))}

@@ -1,0 +1,19 @@
+@import '../../common-styles/variables';
+@import '../../common-styles/mixins';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color, 0.5);
+}
+
+.modal-content {
+  background-color: $primary-shaded;
+  border-radius: $spacing;
+  margin: 15% auto;
+  padding: $spacing;
+  width: 80%;
+}

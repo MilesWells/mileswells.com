@@ -1,4 +1,4 @@
-import { Component, h, Host, JSX, getAssetPath, Fragment } from '@stencil/core';
+import { Component, h, Host, JSX, getAssetPath, Fragment, State } from '@stencil/core';
 
 @Component({
   tag: 'grow-jack-herer',
@@ -7,12 +7,17 @@ import { Component, h, Host, JSX, getAssetPath, Fragment } from '@stencil/core';
   styleUrl: './jack-herer.scss',
 })
 export class JackHerer {
+  @State() modalOpen = false;
+
   render() {
     const dates = Object.keys(content);
     const basePath = getAssetPath('./assets');
 
     return (
       <Host>
+        <grow-modal isOpen={this.modalOpen} handleClose={() => (this.modalOpen = false)}>
+          Test
+        </grow-modal>
         <div class="blurb">
           <a href="https://www.leafly.com/strains/jack-herer" target="_blank">
             Jack Herer
@@ -24,7 +29,13 @@ export class JackHerer {
         </div>
         <div class="article-container">
           {dates.map(date => (
-            <grow-day-entry basePath={basePath} date={date} article={content[date].article} additionalPhotos={content[date].additionalPhotos} />
+            <grow-day-entry
+              additionalPhotos={content[date].additionalPhotos}
+              article={content[date].article}
+              basePath={basePath}
+              date={date}
+              handleThumbnailClick={() => (this.modalOpen = true)}
+            />
           ))}
         </div>
       </Host>
