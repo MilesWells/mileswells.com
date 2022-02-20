@@ -11,6 +11,8 @@ export namespace Components {
     }
     interface GrowAbout {
     }
+    interface GrowCosts {
+    }
     interface GrowDayEntry {
         "additionalPhotos": string[];
         "article": JSX.Element;
@@ -35,6 +37,12 @@ declare global {
         prototype: HTMLGrowAboutElement;
         new (): HTMLGrowAboutElement;
     };
+    interface HTMLGrowCostsElement extends Components.GrowCosts, HTMLStencilElement {
+    }
+    var HTMLGrowCostsElement: {
+        prototype: HTMLGrowCostsElement;
+        new (): HTMLGrowCostsElement;
+    };
     interface HTMLGrowDayEntryElement extends Components.GrowDayEntry, HTMLStencilElement {
     }
     var HTMLGrowDayEntryElement: {
@@ -56,6 +64,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "grow-about": HTMLGrowAboutElement;
+        "grow-costs": HTMLGrowCostsElement;
         "grow-day-entry": HTMLGrowDayEntryElement;
         "grow-jack-herer": HTMLGrowJackHererElement;
         "nav-bar": HTMLNavBarElement;
@@ -65,6 +74,8 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface GrowAbout {
+    }
+    interface GrowCosts {
     }
     interface GrowDayEntry {
         "additionalPhotos"?: string[];
@@ -79,6 +90,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "app-root": AppRoot;
         "grow-about": GrowAbout;
+        "grow-costs": GrowCosts;
         "grow-day-entry": GrowDayEntry;
         "grow-jack-herer": GrowJackHerer;
         "nav-bar": NavBar;
@@ -90,6 +102,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "grow-about": LocalJSX.GrowAbout & JSXBase.HTMLAttributes<HTMLGrowAboutElement>;
+            "grow-costs": LocalJSX.GrowCosts & JSXBase.HTMLAttributes<HTMLGrowCostsElement>;
             "grow-day-entry": LocalJSX.GrowDayEntry & JSXBase.HTMLAttributes<HTMLGrowDayEntryElement>;
             "grow-jack-herer": LocalJSX.GrowJackHerer & JSXBase.HTMLAttributes<HTMLGrowJackHererElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;

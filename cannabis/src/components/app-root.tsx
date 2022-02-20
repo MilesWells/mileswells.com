@@ -12,6 +12,7 @@ export class AppRoot {
         <stencil-router>
           <stencil-route-switch>
             <stencil-route url="/" component="grow-about" exact />
+            <stencil-route url="/costs" component="grow-costs" exact />
             <stencil-route url="/grow/jack-herer" component="grow-jack-herer" exact />
           </stencil-route-switch>
         </stencil-router>

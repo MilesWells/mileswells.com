@@ -15,7 +15,9 @@ export class DayEntry {
   render() {
     const timestamp = moment(this.date, 'YYYY_MM_DD').format('MMMM Do, YYYY');
 
-    const thumbnailPaths = [buildThumbnailpath(this.date, this.basePath)(), ...this.additionalPhotos.map(buildThumbnailpath(this.date, this.basePath))];
+    const thumbnailPaths = [buildThumbnailPath(this.date, this.basePath), ...this.additionalPhotos.map(part => buildThumbnailPath(this.date, this.basePath, part))].map(
+      tn => `${tn}.jpg`,
+    );
 
     return (
       <article>
@@ -33,4 +35,5 @@ export class DayEntry {
   }
 }
 
-const buildThumbnailpath = (date: string, basePath: string) => (part?: string) => `${basePath}/thumbnails/${date}${part ?? ''}_tn.jpg`;
+const buildPath = (date: string, basePath: string, part?: string) => `${basePath}/thumbnails/${date}${part ?? ''}`;
+const buildThumbnailPath = (date: string, basePath: string, part?: string) => `${buildPath(date, basePath, part)}_tn`;

@@ -1,0 +1,6 @@
+@mixin card {
+  background-color: $primary-shaded;
+  border: thin solid $muted-color;
+  border-radius: $spacing;
+  padding: $spacing;
+}

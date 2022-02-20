@@ -20,6 +20,9 @@ export class NavBar {
             <stencil-route-link url="/">About</stencil-route-link>
           </li>
           <li>
+            <stencil-route-link url="/costs">Costs</stencil-route-link>
+          </li>
+          <li>
             <stencil-route-link url="/grow/jack-herer">Current Grow</stencil-route-link>
           </li>
         </ul>

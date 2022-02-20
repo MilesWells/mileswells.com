@@ -17,8 +17,8 @@ export class JackHerer {
           <a href="https://www.leafly.com/strains/jack-herer" target="_blank">
             Jack Herer
           </a>{' '}
-          is a sativa-dominant strain of cannabis created in the Neatherlands in the mid 1990's by Sensi Seeds. The name is an Honorarium of a man by the same name who was a
-          pro-cannabis activist active mainly in the 1970's. It's advertise as having a flowering time of 50-70 days.
+          is a sativa-dominant strain of cannabis created in the Neatherlands in the mid 1990's by Sensi Seeds. The name is an honorarium of a man by the same name who was a
+          pro-cannabis activist who was active mainly in the 1970's. Jack Herer's advertised flowering time is 50-70 days.
         </p>
         <div class="article-container">
           {dates.map(date => (

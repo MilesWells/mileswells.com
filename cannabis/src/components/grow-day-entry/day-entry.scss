@@ -1,10 +1,8 @@
 @import '../../common-styles/variables';
+@import '../../common-styles/mixins';
 
 article {
-  background-color: $primary-shaded;
-  border: thin solid $muted-color;
-  border-radius: $spacing;
-  padding: $spacing;
+  @include card();
 }
 
 .timestamp {

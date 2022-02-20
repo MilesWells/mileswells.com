@@ -1,0 +1,28 @@
+@import '../../common-styles/variables';
+@import '../../common-styles/mixins';
+
+.cost-tracker {
+  @include card();
+
+  display: flex;
+  flex-direction: column;
+  font-size: calc($font-size * 2);
+
+  & :nth-child(even) {
+    justify-self: flex-end;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    &:last-of-type {
+      border-top: $muted-color solid 2px;
+      margin-top: $spacing;
+      padding-top: $spacing;
+    }
+  }
+}
+p {
+  margin: 0;
+}
