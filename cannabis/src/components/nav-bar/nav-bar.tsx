@@ -11,7 +11,9 @@ export class NavBar {
       <nav>
         <ul>
           <li>
-            <strong>Growing Cannabis for Health and Hobby</strong>
+            <strong>
+              <i>Growing Cannabis for Health and Hobby</i>
+            </strong>
           </li>
         </ul>
 
