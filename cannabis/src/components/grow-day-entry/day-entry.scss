@@ -1,5 +1,7 @@
 @use '../../common-styles/common' as *;
 
+$border-separator: solid $muted-color thick;
+
 article {
   @include card();
 }
@@ -26,12 +28,33 @@ article {
   }
 
   section {
-    border-left: solid $muted-color thick;
+    border-left: $border-separator;
     color: $secondary;
     padding-left: 20px;
 
     p {
       margin-top: 0px;
+    }
+  }
+}
+
+@media (max-width: $sm-breakpoint) {
+  .container {
+    grid-template-columns: 1fr;
+
+    & :last-child {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
+    .thumbnails {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    section {
+      border-left: none;
+      border-bottom: $border-separator;
+      padding-inline: 0;
     }
   }
 }
