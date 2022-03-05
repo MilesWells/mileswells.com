@@ -1,12 +1,14 @@
+@use './variables' as v;
+
 a {
   $transition: 0.3s ease-in-out;
 
-  color: $link-color;
+  color: v.$link-color;
   text-decoration: none;
   transition: color $transition, text-decoration $transition;
 
   &:hover {
-    color: $link-hover-color;
+    color: v.$link-hover-color;
     text-decoration: underline;
   }
 }

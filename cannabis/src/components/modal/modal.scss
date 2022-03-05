@@ -1,5 +1,5 @@
-@import '../../common-styles/variables';
-@import '../../common-styles/mixins';
+@use 'sass:math';
+@use '../../common-styles/common' as *;
 
 .modal {
   display: flex;
@@ -18,10 +18,10 @@
 
   .close-btn {
     background-color: black;
-    border-radius: $spacing / 2;
+    border-radius: math.div($spacing, 2);
     cursor: pointer;
     margin: $spacing;
-    padding: $spacing / 3;
+    padding: math.div($spacing, 3);
     position: absolute;
 
     &:hover {

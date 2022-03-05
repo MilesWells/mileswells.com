@@ -1,4 +1,4 @@
-@import '../common-styles/variables';
+@use '../common-styles/common' as *;
 
 html {
   background-color: $background-color;

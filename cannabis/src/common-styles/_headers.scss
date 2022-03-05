@@ -1,35 +1,37 @@
+@use './variables' as v;
+
 h1,
 h3,
 h4 {
-  color: $color;
+  color: v.$color;
   font-weight: 700;
   margin-top: 0;
 }
 
 h1 {
-  font-size: 2 * $font-size;
-  margin-bottom: 3 * $spacing;
+  font-size: 2 * v.$font-size;
+  margin-bottom: 3 * v.$spacing;
 }
 
 h3 {
-  $font-size: 1.5 * $font-size;
-  margin-bottom: $spacing;
+  font-size: 1.5 * v.$font-size;
+  margin-bottom: v.$spacing;
 }
 
 h4 {
-  font-size: 1.25 * $font-size;
-  margin-bottom: 1.25 * $spacing;
+  font-size: 1.25 * v.$font-size;
+  margin-bottom: 1.25 * v.$spacing;
 }
 
 hgroup {
-  margin-bottom: $spacing * 1.5;
+  margin-bottom: v.$spacing * 1.5;
 
   & > * {
     margin-bottom: 0;
   }
 
   & > :last-child {
-    color: $muted-color;
+    color: v.$muted-color;
 
     font-weight: initial;
     font-size: unset;

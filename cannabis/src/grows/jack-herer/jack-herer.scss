@@ -1,7 +1,4 @@
-@import '../../common-styles/variables';
-@import '../../common-styles/mixins';
-@import '../../common-styles/headers';
-@import '../../common-styles/links';
+@use '../../common-styles/common' as *;
 
 a {
   font-size: $font-size * 2;
