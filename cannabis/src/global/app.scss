@@ -17,12 +17,12 @@ body {
 }
 
 main {
-  margin: 0 ($spacing * 4);
+  margin: 0 $spacing;
 }
 
-@media (min-width: 1001px) {
+@media (min-width: $sm-breakpoint) {
   main {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: calc($sm-breakpoint - $spacing);
   }
 }
