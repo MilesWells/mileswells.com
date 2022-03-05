@@ -9,6 +9,7 @@ export class AppRoot {
     return (
       <Host>
         <nav-bar />
+        <grow-disclaimer />
         <stencil-router>
           <stencil-route-switch>
             <stencil-route url="/" component="grow-about" exact />

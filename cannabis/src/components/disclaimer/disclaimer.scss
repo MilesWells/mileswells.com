@@ -1,0 +1,33 @@
+@use 'sass:math';
+@use '../../common-styles/common' as *;
+
+.disclaimer {
+  @include card();
+  background-color: #261c15;
+  margin-block-end: $spacing;
+
+  h4 {
+    text-decoration: underline;
+  }
+
+  p,
+  h4 {
+    margin: 0;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: $muted-color;
+      cursor: pointer;
+      font-size: $spacing * 0.75;
+      transition: all 300ms;
+
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+}

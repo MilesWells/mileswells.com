@@ -20,6 +20,8 @@ export namespace Components {
         "date": string;
         "handleThumbnailClick": (fullSizePath: string) => void;
     }
+    interface GrowDisclaimer {
+    }
     interface GrowJackHerer {
     }
     interface GrowModal {
@@ -54,6 +56,12 @@ declare global {
         prototype: HTMLGrowDayEntryElement;
         new (): HTMLGrowDayEntryElement;
     };
+    interface HTMLGrowDisclaimerElement extends Components.GrowDisclaimer, HTMLStencilElement {
+    }
+    var HTMLGrowDisclaimerElement: {
+        prototype: HTMLGrowDisclaimerElement;
+        new (): HTMLGrowDisclaimerElement;
+    };
     interface HTMLGrowJackHererElement extends Components.GrowJackHerer, HTMLStencilElement {
     }
     var HTMLGrowJackHererElement: {
@@ -77,6 +85,7 @@ declare global {
         "grow-about": HTMLGrowAboutElement;
         "grow-costs": HTMLGrowCostsElement;
         "grow-day-entry": HTMLGrowDayEntryElement;
+        "grow-disclaimer": HTMLGrowDisclaimerElement;
         "grow-jack-herer": HTMLGrowJackHererElement;
         "grow-modal": HTMLGrowModalElement;
         "nav-bar": HTMLNavBarElement;
@@ -96,6 +105,8 @@ declare namespace LocalJSX {
         "date"?: string;
         "handleThumbnailClick"?: (fullSizePath: string) => void;
     }
+    interface GrowDisclaimer {
+    }
     interface GrowJackHerer {
     }
     interface GrowModal {
@@ -109,6 +120,7 @@ declare namespace LocalJSX {
         "grow-about": GrowAbout;
         "grow-costs": GrowCosts;
         "grow-day-entry": GrowDayEntry;
+        "grow-disclaimer": GrowDisclaimer;
         "grow-jack-herer": GrowJackHerer;
         "grow-modal": GrowModal;
         "nav-bar": NavBar;
@@ -122,6 +134,7 @@ declare module "@stencil/core" {
             "grow-about": LocalJSX.GrowAbout & JSXBase.HTMLAttributes<HTMLGrowAboutElement>;
             "grow-costs": LocalJSX.GrowCosts & JSXBase.HTMLAttributes<HTMLGrowCostsElement>;
             "grow-day-entry": LocalJSX.GrowDayEntry & JSXBase.HTMLAttributes<HTMLGrowDayEntryElement>;
+            "grow-disclaimer": LocalJSX.GrowDisclaimer & JSXBase.HTMLAttributes<HTMLGrowDisclaimerElement>;
             "grow-jack-herer": LocalJSX.GrowJackHerer & JSXBase.HTMLAttributes<HTMLGrowJackHererElement>;
             "grow-modal": LocalJSX.GrowModal & JSXBase.HTMLAttributes<HTMLGrowModalElement>;
             "nav-bar": LocalJSX.NavBar & JSXBase.HTMLAttributes<HTMLNavBarElement>;

@@ -25,6 +25,7 @@
       position: absolute;
       top: math.div($spacing, 6);
       right: math.div($spacing, 3);
+      transition: all 300ms;
 
       &:hover {
         background-color: #333;
