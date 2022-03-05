@@ -28,6 +28,7 @@ export class DayEntry {
             {thumbnailPaths.map((path, idx) => (
               <img onClick={() => this.handleThumbnailClick(paths[idx])} src={path} />
             ))}
+            {thumbnailPaths.length === 1 && <div class="placeholder" />}
           </div>
           <section>{this.article}</section>
         </div>

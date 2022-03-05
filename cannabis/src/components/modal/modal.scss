@@ -3,6 +3,7 @@
 
 .modal {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -11,21 +12,27 @@
   height: 100%;
   width: 100%;
   background-color: rgba($color, 0.5);
+
+  .close-btn {
+    align-self: flex-end;
+    padding: math.div($spacing, 3);
+
+    div {
+      background-color: black;
+      border-radius: math.div($spacing, 2);
+      cursor: pointer;
+      padding: math.div($spacing, 3);
+      position: absolute;
+      top: math.div($spacing, 6);
+      right: math.div($spacing, 3);
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
 }
 
 .modal-content {
   height: 90%;
-
-  .close-btn {
-    background-color: black;
-    border-radius: math.div($spacing, 2);
-    cursor: pointer;
-    margin: $spacing;
-    padding: math.div($spacing, 3);
-    position: absolute;
-
-    &:hover {
-      background-color: #333;
-    }
-  }
 }

@@ -25,10 +25,10 @@ export class Modal {
           if (e.target === e.currentTarget) this.handleClose();
         }}
       >
+        <div class="close-btn">
+          <div onClick={this.handleClose}>Close</div>
+        </div>
         <div class="modal-content">
-          <div class="close-btn" onClick={this.handleClose}>
-            Close
-          </div>
           <slot />
         </div>
       </div>
