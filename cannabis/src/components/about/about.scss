@@ -1,9 +1,0 @@
-@use '../../common-styles/common' as *;
-
-div {
-  @include card();
-}
-
-a {
-  text-decoration: underline;
-}

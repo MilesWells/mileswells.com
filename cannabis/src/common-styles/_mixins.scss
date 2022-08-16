@@ -1,8 +1,0 @@
-@use './variables' as v;
-
-@mixin card {
-  background-color: v.$primary-shaded;
-  border: thin solid v.$muted-color;
-  border-radius: v.$spacing;
-  padding: v.$spacing;
-}
