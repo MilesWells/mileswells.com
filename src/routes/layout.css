@@ -22,7 +22,6 @@
 	}
 	body {
 		font-family: var(--font-sans);
-		background-color: var(--color-space-950);
 		-webkit-font-smoothing: antialiased;
 	}
 	a {
