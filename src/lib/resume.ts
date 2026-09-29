@@ -2,7 +2,7 @@ export type ContactLink = { label: string; text: string; href: string };
 export type Job = {
 	title: string;
 	company: string;
-	location?: string;
+	location: string;
 	dates: string;
 	bullets: string[];
 };
