@@ -427,7 +427,7 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 	<h2 id="experience-heading" class="font-display text-cyan text-sm font-semibold tracking-[0.2em] uppercase">
 		Experience
 	</h2>
-	<ol class="mt-8 ml-1.5 border-l border-linear border-azure/30">
+	<ol class="mt-8 ml-1.5 border-l border-azure/30">
 		{#each resume.jobs as job (job.company)}
 			<Job {job} />
 		{/each}
@@ -435,17 +435,11 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 </section>
 ```
 
-Note: replace the invalid `border-linear` class with nothing; the border is `border-l border-azure/30`. (Corrected in Step 3.)
-
-- [ ] **Step 3: Fix the class typo**
-
-In `Experience.svelte`, the `<ol>` class must be exactly `mt-8 ml-1.5 border-l border-azure/30`.
-
-- [ ] **Step 4: Validate**
+- [ ] **Step 3: Validate**
 
 Run svelte-autofixer on both files until clean, then `pnpm check`. Expected: 0 errors.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 4: Commit**
 
 ```bash
 git add src/lib/components/Job.svelte src/lib/components/Experience.svelte
