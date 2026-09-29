@@ -1,4 +1,3 @@
-export type ContactLink = { label: string; text: string; href: string; copyable?: boolean };
 export type Job = {
 	title: string;
 	company: string;
@@ -11,19 +10,6 @@ export type SkillGroup = { name: string; items: string[] };
 export const resume = {
 	name: 'Miles Wells',
 	location: 'Durham, NC',
-	contacts: [
-		{
-			label: 'Email',
-			text: 'milescwells@pm.me',
-			href: 'mailto:milescwells@pm.me',
-			copyable: true
-		},
-		{
-			label: 'LinkedIn',
-			text: 'linkedin.com/in/mileswells',
-			href: 'https://linkedin.com/in/mileswells'
-		}
-	] satisfies ContactLink[],
 	summary:
 		'Staff Software Engineer with 10 years of full-stack experience, specializing in UI architecture and the integration layer between frontends and backend services. Spent seven years as the sole UI engineer at a robotics software company, owning front-end architecture, testing standards, performance, and UX partnership. TypeScript-first, with a rigorous approach to testing and a pragmatic approach to AI-assisted development.',
 	jobs: [
