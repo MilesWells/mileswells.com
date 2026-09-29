@@ -1,1 +1,36 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/space-grotesk';
+
+@theme {
+	--color-space-950: #040816;
+	--color-space-900: #0a1330;
+	--color-cobalt: #2f5bea;
+	--color-azure: #4f9dff;
+	--color-cyan: #5ce1ff;
+	--color-ice: #cfe8ff;
+	--color-amber: #ffb066;
+	--font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Space Grotesk Variable', 'Inter Variable', ui-sans-serif, sans-serif;
+}
+
+@layer base {
+	html {
+		background-color: var(--color-space-950);
+		color: var(--color-ice);
+		color-scheme: dark;
+	}
+	body {
+		font-family: var(--font-sans);
+		background-color: var(--color-space-950);
+		-webkit-font-smoothing: antialiased;
+	}
+	a {
+		text-underline-offset: 3px;
+	}
+	:focus-visible {
+		outline: 2px solid var(--color-cyan);
+		outline-offset: 3px;
+		border-radius: 4px;
+	}
+}
