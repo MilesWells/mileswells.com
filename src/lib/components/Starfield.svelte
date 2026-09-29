@@ -61,17 +61,4 @@
 		height: 2px;
 		border-radius: 50%;
 	}
-	@media (prefers-reduced-motion: no-preference) {
-		.stars.far {
-			animation: drift 240s linear infinite;
-		}
-		.stars.near {
-			animation: drift 140s linear infinite;
-		}
-	}
-	@keyframes drift {
-		to {
-			transform: translateY(-20vh);
-		}
-	}
 </style>
