@@ -14,7 +14,7 @@
 			<div>
 				<dt class="text-sm font-medium text-ice/80">{group.name}</dt>
 				<dd class="mt-2">
-					<ul class="flex flex-wrap gap-2">
+					<ul role="list" class="flex flex-wrap gap-2">
 						{#each group.items as item (item)}
 							<li
 								class="rounded-full border border-azure/30 bg-cobalt/15 px-3 py-1 text-sm text-ice"

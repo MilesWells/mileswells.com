@@ -10,7 +10,7 @@
 	>
 		Experience
 	</h2>
-	<ol class="mt-8 ml-1.5 border-l border-azure/30">
+	<ol role="list" class="mt-8 ml-1.5 border-l border-azure/30">
 		{#each resume.jobs as job (job.company)}
 			<Job {job} />
 		{/each}

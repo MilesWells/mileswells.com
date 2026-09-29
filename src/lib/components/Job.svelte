@@ -15,7 +15,7 @@
 	<p class="mt-1 text-sm text-amber">
 		{job.dates}{#if job.location}<span class="text-ice/70"> · {job.location}</span>{/if}
 	</p>
-	<ul class="mt-4 space-y-3 leading-relaxed text-ice/90">
+	<ul role="list" class="mt-4 space-y-3 leading-relaxed text-ice/90">
 		{#each job.bullets as bullet (bullet)}
 			<li
 				class="relative pl-5 before:absolute before:top-[0.7em] before:left-0 before:size-1.5 before:rounded-full before:bg-azure/70"

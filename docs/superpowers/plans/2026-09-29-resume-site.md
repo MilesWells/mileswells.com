@@ -37,12 +37,14 @@
 ### Task 1: Theme, fonts, and app shell
 
 **Files:**
+
 - Modify: `package.json` (deps via pnpm)
 - Modify: `src/routes/layout.css`
 - Create: `src/lib/components/Starfield.svelte`
 - Modify: `src/routes/+layout.svelte`
 
 **Interfaces:**
+
 - Produces: Tailwind color utilities `bg-space-950`, `bg-space-900`, `text-ice`, `text-azure`, `text-cyan`, `text-amber`, `bg-cobalt`; font utilities `font-sans` (Inter Variable) and `font-display` (Space Grotesk Variable); `<Starfield />` (no props); a `.focus-ring`-free global `:focus-visible` style.
 
 - [ ] **Step 1: Install fonts**
@@ -140,7 +142,12 @@ Create `src/lib/components/Starfield.svelte`:
 			radial-gradient(50rem 36rem at 85% 30%, rgb(92 225 255 / 0.16), transparent 60%),
 			radial-gradient(45rem 30rem at 50% 95%, rgb(79 157 255 / 0.22), transparent 65%),
 			radial-gradient(30rem 20rem at 92% 92%, rgb(255 176 102 / 0.08), transparent 70%),
-			linear-gradient(180deg, var(--color-space-950), var(--color-space-900) 60%, var(--color-space-950));
+			linear-gradient(
+				180deg,
+				var(--color-space-950),
+				var(--color-space-900) 60%,
+				var(--color-space-950)
+			);
 	}
 	.stars::after {
 		content: '';
@@ -208,9 +215,11 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ### Task 2: Resume data module
 
 **Files:**
+
 - Create: `src/lib/resume.ts`
 
 **Interfaces:**
+
 - Produces:
   - `type ContactLink = { label: string; text: string; href: string }`
   - `type Job = { title: string; company: string; location?: string; dates: string; bullets: string[] }`
@@ -254,7 +263,7 @@ export const resume = {
 			bullets: [
 				'Sole UI engineer for the company; owned end-to-end front-end architecture across up to 3 production applications built with TypeScript and Next.js',
 				'Partnered directly with the product designer as the primary technical voice on UX decisions, translating design intent into performant, production-ready interfaces',
-				"Established testing standards for UI projects (role-based visual regression, role-based interaction testing, E2E coverage, and schema-based validation of external service integrations), cutting test effort from days to the roughly one hour it takes to run the full automated suite",
+				'Established testing standards for UI projects (role-based visual regression, role-based interaction testing, E2E coverage, and schema-based validation of external service integrations), cutting test effort from days to the roughly one hour it takes to run the full automated suite',
 				'Isolated E2E tests to eliminate flaky failures and the reruns they caused',
 				'Added Largest Contentful Paint and Cumulative Layout Shift testing to critical user paths, and used the results to bring LCP under 2.5 seconds and CLS under 0.1',
 				"Built AI tooling that lets anyone at the company with GitHub access create proof-of-concept features directly inside our applications using real data, with each one going through the normal dev review process. This shortened the path from idea to customers' hands and saved developer time"
@@ -321,9 +330,11 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ### Task 3: Hero
 
 **Files:**
+
 - Create: `src/lib/components/Hero.svelte`
 
 **Interfaces:**
+
 - Consumes: `resume.name`, `resume.location`, `resume.contacts`, `resume.summary`, `resume.jobs[0].title` from Task 2.
 - Produces: `<Hero />` (no props). Renders the page's only `<h1>` inside `<header>`.
 
@@ -335,11 +346,11 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 </script>
 
 <header class="mx-auto max-w-4xl px-4 pt-20 pb-12 sm:px-6 sm:pt-32">
-	<p class="text-amber text-sm font-medium tracking-[0.2em] uppercase">
+	<p class="text-sm font-medium tracking-[0.2em] text-amber uppercase">
 		{resume.jobs[0].title} · {resume.location}
 	</p>
 	<h1
-		class="font-display mt-4 bg-linear-to-r from-white via-ice to-cyan bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
+		class="mt-4 bg-linear-to-r from-white via-ice to-cyan bg-clip-text font-display text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
 	>
 		{resume.name}
 	</h1>
@@ -349,7 +360,7 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 			<li class="min-w-0">
 				<a
 					href={contact.href}
-					class="text-azure hover:text-cyan break-all underline decoration-azure/40 hover:decoration-cyan"
+					class="break-all text-azure underline decoration-azure/40 hover:text-cyan hover:decoration-cyan"
 					aria-label="{contact.label}: {contact.text}"
 				>
 					{contact.text}
@@ -378,10 +389,12 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ### Task 4: Experience timeline
 
 **Files:**
+
 - Create: `src/lib/components/Job.svelte`
 - Create: `src/lib/components/Experience.svelte`
 
 **Interfaces:**
+
 - Consumes: `type Job`, `resume.jobs` from Task 2.
 - Produces: `<Job job={Job} />` renders an `<li>`; `<Experience />` (no props) renders `<section aria-labelledby="experience-heading">` with an h2 and an `<ol>` of `<Job>`.
 
@@ -402,12 +415,14 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 	<h3 class="font-display text-xl font-semibold text-white sm:text-2xl">
 		{job.title} <span class="text-azure">· {job.company}</span>
 	</h3>
-	<p class="text-amber mt-1 text-sm">
+	<p class="mt-1 text-sm text-amber">
 		{job.dates}{#if job.location}<span class="text-ice/70"> · {job.location}</span>{/if}
 	</p>
 	<ul class="mt-4 space-y-3 leading-relaxed text-ice/90">
 		{#each job.bullets as bullet (bullet)}
-			<li class="relative pl-5 before:absolute before:top-[0.7em] before:left-0 before:size-1.5 before:rounded-full before:bg-azure/70">
+			<li
+				class="relative pl-5 before:absolute before:top-[0.7em] before:left-0 before:size-1.5 before:rounded-full before:bg-azure/70"
+			>
 				{bullet}
 			</li>
 		{/each}
@@ -424,7 +439,10 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 </script>
 
 <section aria-labelledby="experience-heading" class="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-	<h2 id="experience-heading" class="font-display text-cyan text-sm font-semibold tracking-[0.2em] uppercase">
+	<h2
+		id="experience-heading"
+		class="font-display text-sm font-semibold tracking-[0.2em] text-cyan uppercase"
+	>
 		Experience
 	</h2>
 	<ol class="mt-8 ml-1.5 border-l border-azure/30">
@@ -453,10 +471,12 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ### Task 5: Skills and Education
 
 **Files:**
+
 - Create: `src/lib/components/Skills.svelte`
 - Create: `src/lib/components/Education.svelte`
 
 **Interfaces:**
+
 - Consumes: `resume.skills`, `resume.education` from Task 2.
 - Produces: `<Skills />` and `<Education />` (no props), each a `<section aria-labelledby=...>` with an h2.
 
@@ -468,7 +488,10 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 </script>
 
 <section aria-labelledby="skills-heading" class="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-	<h2 id="skills-heading" class="font-display text-cyan text-sm font-semibold tracking-[0.2em] uppercase">
+	<h2
+		id="skills-heading"
+		class="font-display text-sm font-semibold tracking-[0.2em] text-cyan uppercase"
+	>
 		Skills
 	</h2>
 	<dl class="mt-8 space-y-6">
@@ -478,7 +501,9 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 				<dd class="mt-2">
 					<ul class="flex flex-wrap gap-2">
 						{#each group.items as item (item)}
-							<li class="rounded-full border border-azure/30 bg-cobalt/15 px-3 py-1 text-sm text-ice">
+							<li
+								class="rounded-full border border-azure/30 bg-cobalt/15 px-3 py-1 text-sm text-ice"
+							>
 								{item}
 							</li>
 						{/each}
@@ -498,7 +523,10 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 </script>
 
 <section aria-labelledby="education-heading" class="mx-auto max-w-4xl px-4 py-12 pb-24 sm:px-6">
-	<h2 id="education-heading" class="font-display text-cyan text-sm font-semibold tracking-[0.2em] uppercase">
+	<h2
+		id="education-heading"
+		class="font-display text-sm font-semibold tracking-[0.2em] text-cyan uppercase"
+	>
 		Education
 	</h2>
 	<p class="mt-8 text-lg text-white">
@@ -526,9 +554,11 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ### Task 6: Compose page and metadata
 
 **Files:**
+
 - Modify: `src/routes/+page.svelte`
 
 **Interfaces:**
+
 - Consumes: `<Hero />`, `<Experience />`, `<Skills />`, `<Education />`, `resume.name`, `resume.summary`.
 - Produces: the prerendered index page wrapped in `<main>` (Hero's `<header>` sits inside it).
 
@@ -583,6 +613,7 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ### Task 7: Verify visually and for accessibility
 
 **Files:**
+
 - Modify (only if fixes are needed): any file above
 
 - [ ] **Step 1: Contrast check**
@@ -597,6 +628,7 @@ for(const [n,fg] of Object.entries({ice:"#cfe8ff",azure:"#4f9dff",cyan:"#5ce1ff"
  for(const bg of ["#040816","#0a1330"]) console.log(n,bg,r(fg,bg));
 '
 ```
+
 Expected: every ratio ≥ 4.5. If `azure` on `#040816` falls short, lighten it to the lowest value that passes, in `layout.css`.
 
 Note: `text-ice/90` and `text-ice/80` are alpha blends; confirm they still pass by computing `ice` at 0.8 opacity over `#0a1330` (about `#a5b9d1`-ish). If below 4.5, use `/90` instead.
@@ -622,4 +654,5 @@ git commit -m "chore: polish and verify resume site
 
 Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"
 ```
+
 Skip the commit if nothing changed.

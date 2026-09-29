@@ -12,7 +12,7 @@
 		{resume.name}
 	</h1>
 	<p class="mt-8 max-w-2xl text-lg leading-relaxed text-ice/90">{resume.summary}</p>
-	<ul class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+	<ul role="list" class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm">
 		{#each resume.contacts as contact (contact.label)}
 			<li class="min-w-0">
 				<!-- eslint-disable svelte/no-navigation-without-resolve -- external, mailto and tel links -->
