@@ -1,7 +1,14 @@
 <script lang="ts">
 	let { text, label }: { text: string; label: string } = $props();
 
-	let status = $state<'idle' | 'copied' | 'failed'>('idle');
+	type Status = 'idle' | 'copied' | 'failed';
+	const messages: Record<Status, string> = {
+		idle: '',
+		copied: 'Copied to clipboard',
+		failed: "Couldn't copy"
+	};
+
+	let status = $state<Status>('idle');
 	let timer: ReturnType<typeof setTimeout> | undefined;
 
 	async function copy() {
@@ -22,12 +29,8 @@
 	type="button"
 	onclick={copy}
 	aria-label={label}
-	class="flex items-center rounded-r-full border-l border-azure/30 py-2.5 pr-4 pl-3 hover:bg-cobalt/25 hover:text-cyan {status ===
-	'copied'
-		? 'text-cyan'
-		: status === 'failed'
-			? 'text-amber'
-			: 'text-azure'}"
+	data-status={status}
+	class="flex items-center rounded-r-full border-l border-azure/30 py-2.5 pr-4 pl-3 text-azure hover:bg-cobalt/25 hover:text-cyan data-[status=copied]:text-cyan data-[status=failed]:text-amber"
 >
 	<svg
 		class="size-4"
@@ -51,5 +54,5 @@
 	</svg>
 </button>
 <span class="sr-only" role="status">
-	{status === 'copied' ? 'Copied to clipboard' : status === 'failed' ? "Couldn't copy" : ''}
+	{messages[status]}
 </span>
