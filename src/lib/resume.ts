@@ -10,11 +10,9 @@ export type SkillGroup = { name: string; items: string[] };
 
 export const resume = {
 	name: 'Miles Wells',
-	location: 'Raleigh-Durham, NC',
+	location: 'Durham, NC',
 	contacts: [
 		{ label: 'Email', text: 'milescwells@pm.me', href: 'mailto:milescwells@pm.me' },
-		{ label: 'Phone', text: '919-272-3020', href: 'tel:+19192723020' },
-		{ label: 'Website', text: 'mileswells.com', href: 'https://mileswells.com' },
 		{
 			label: 'LinkedIn',
 			text: 'linkedin.com/in/mileswells',
@@ -30,26 +28,28 @@ export const resume = {
 			location: 'Remote, Norfolk, VA',
 			dates: 'Jul 2019 – Sep 2026',
 			bullets: [
-				'Sole UI engineer for the company; owned end-to-end front-end architecture across up to 3 production applications built with TypeScript and Next.js',
+				'Sole UI engineer for the company; owned end-to-end front-end architecture across multiple applications built with TypeScript and Next.js',
 				'Partnered directly with the product designer as the primary technical voice on UX decisions, translating design intent into performant, production-ready interfaces',
 				'Established testing standards for UI projects (role-based visual regression, role-based interaction testing, E2E coverage, and schema-based validation of external service integrations), cutting test effort from days to the roughly one hour it takes to run the full automated suite',
 				'Isolated E2E tests to eliminate flaky failures and the reruns they caused',
-				'Added Largest Contentful Paint and Cumulative Layout Shift testing to critical user paths, and used the results to bring LCP under 2.5 seconds and CLS under 0.1',
+				'Added automated Largest Contentful Paint and Cumulative Layout Shift testing to critical user paths, and used the results to bring LCP under 2.5 seconds and CLS under 0.1',
 				"Built AI tooling that lets anyone at the company with GitHub access create proof-of-concept features directly inside our applications using real data, with each one going through the normal dev review process. This shortened the path from idea to customers' hands and saved developer time"
 			]
 		},
 		{
 			title: 'Frontend Developer',
 			company: 'Validic',
+			location: 'Durham, NC',
 			dates: 'Mar 2018 – Mar 2019',
 			bullets: [
-				'Built a professional services product for remote monitoring of diabetes patients using React and Redux',
-				'Worked on the Impact team on a remote patient monitoring platform using React, TypeScript, and GraphQL, with a Node middleware layer handling SSO via SAML and OIDC'
+				'Built a professional services product for remote monitoring of diabetes patients using React Router and Redux',
+				'Worked on the Impact team on a remote patient monitoring platform using React, TypeScript, and GraphQL, with a Node middleware layer enabling SSO via SAML or OIDC'
 			]
 		},
 		{
 			title: 'Software Engineer',
 			company: 'Dude Solutions',
+			location: 'Cary, NC',
 			dates: 'Jun 2016 – Mar 2018',
 			bullets: [
 				'Designed and implemented features for a work order management platform, building RESTful APIs in .NET with an Entity Framework data layer',
@@ -65,13 +65,20 @@ export const resume = {
 		},
 		{
 			name: 'Testing',
-			items: ['Chromatic', 'Storybook', 'Playwright', 'Zod', 'visual regression', 'E2E']
+			items: [
+				'Chromatic',
+				'Storybook',
+				'Playwright',
+				'Schema Validation',
+				'Visual Regression',
+				'E2E'
+			]
 		},
 		{
 			name: 'Data',
-			items: ['Elasticsearch', 'PostgreSQL', 'RabbitMQ', 'WebSockets', 'REST APIs']
+			items: ['REST APIs', 'WebSockets', 'Elasticsearch', 'PostgreSQL', 'RabbitMQ']
 		},
-		{ name: 'Auth', items: ['OAuth', 'OIDC'] }
+		{ name: 'Auth', items: ['OAuth', 'OIDC', 'SAML'] }
 	] satisfies SkillGroup[],
 	education: {
 		degree: 'B.S., Computer Science',
