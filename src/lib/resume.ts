@@ -1,4 +1,4 @@
-export type ContactLink = { label: string; text: string; href: string };
+export type ContactLink = { label: string; text: string; href: string; copyable?: boolean };
 export type Job = {
 	title: string;
 	company: string;
@@ -12,7 +12,12 @@ export const resume = {
 	name: 'Miles Wells',
 	location: 'Durham, NC',
 	contacts: [
-		{ label: 'Email', text: 'milescwells@pm.me', href: 'mailto:milescwells@pm.me' },
+		{
+			label: 'Email',
+			text: 'milescwells@pm.me',
+			href: 'mailto:milescwells@pm.me',
+			copyable: true
+		},
 		{
 			label: 'LinkedIn',
 			text: 'linkedin.com/in/mileswells',
