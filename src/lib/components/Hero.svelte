@@ -2,7 +2,7 @@
 	import CopyButton from './CopyButton.svelte';
 </script>
 
-<header class="mx-auto max-w-4xl px-4 pt-20 pb-12 sm:px-6 sm:pt-32">
+<header class="mx-auto max-w-4xl px-4 pt-20 sm:px-6 sm:pt-32">
 	<p class="text-sm font-medium tracking-[0.2em] text-amber uppercase">
 		Staff Software Engineer · Durham, NC
 	</p>
@@ -41,11 +41,29 @@
 			</a>
 			<CopyButton text="milescwells@pm.me" label="Copy email address" />
 		</span>
-		<a
-			href="https://linkedin.com/in/mileswells"
-			class="break-all text-azure underline decoration-azure/40 hover:text-cyan hover:decoration-cyan"
-		>
-			linkedin.com/in/mileswells
-		</a>
+		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
+			<a
+				href="https://linkedin.com/in/mileswells"
+				class="flex min-w-0 items-center gap-2 rounded-full py-2.5 pr-4 pl-4 text-azure hover:bg-cobalt/25 hover:text-cyan"
+			>
+				<svg
+					class="size-4 shrink-0"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<path
+						d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+					/>
+					<rect width="4" height="12" x="2" y="9" />
+					<circle cx="4" cy="4" r="2" />
+				</svg>
+				<span class="break-all">Connect</span>
+			</a>
+		</span>
 	</div>
 </header>
