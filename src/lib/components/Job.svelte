@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Job } from '$lib/resume';
+	import type { Job } from '$lib/jobs';
 
 	let { job }: { job: Job } = $props();
 </script>

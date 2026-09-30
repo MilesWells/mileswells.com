@@ -1,5 +1,26 @@
 <script lang="ts">
-	import { resume } from '$lib/resume';
+	const groups = [
+		{
+			name: 'Languages & Frameworks',
+			items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Node.js', '.NET / C#']
+		},
+		{
+			name: 'Testing',
+			items: [
+				'Chromatic',
+				'Storybook',
+				'Playwright',
+				'Schema Validation',
+				'Visual Regression',
+				'E2E'
+			]
+		},
+		{
+			name: 'Data',
+			items: ['REST APIs', 'WebSockets', 'Elasticsearch', 'PostgreSQL', 'RabbitMQ']
+		},
+		{ name: 'Auth', items: ['OAuth', 'OIDC', 'SAML'] }
+	];
 </script>
 
 <section aria-labelledby="skills-heading" class="mx-auto max-w-4xl px-4 py-12 sm:px-6">
@@ -10,7 +31,7 @@
 		Skills
 	</h2>
 	<dl class="mt-8 space-y-6">
-		{#each resume.skills as group (group.name)}
+		{#each groups as group (group.name)}
 			<div>
 				<dt class="text-sm font-medium text-ice/80">{group.name}</dt>
 				<dd class="mt-2">

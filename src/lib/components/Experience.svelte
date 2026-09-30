@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resume } from '$lib/resume';
+	import { jobs } from '$lib/jobs';
 	import Job from './Job.svelte';
 </script>
 
@@ -11,7 +11,7 @@
 		Experience
 	</h2>
 	<ol role="list" class="mt-8 ml-1.5 border-l border-azure/30">
-		{#each resume.jobs as job (job.company)}
+		{#each jobs as job (job.company)}
 			<Job {job} />
 		{/each}
 	</ol>
