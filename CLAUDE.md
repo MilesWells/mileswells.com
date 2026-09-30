@@ -21,5 +21,4 @@ Online business card: a single static resume page. SvelteKit (adapter-static, pr
 
 ## Workflow
 
-- Commit directly on `main`; no feature branches or worktrees.
-- Never push unless asked.
+- Work on `main`; no feature branches or worktrees.
