@@ -14,6 +14,7 @@ Online business card: a single static resume page. SvelteKit (adapter-static, pr
 
 - Svelte 5 runes only (`$props`, `$state`, snippets, `onclick=`); no legacy syntax (`export let`, `<slot>`, `on:`, `class:`).
 - Run Validation and fix any issues
+- Put a blank line between sibling DOM nodes in markup (elements, components, blocks), but not between SVG children or `<head>` children.
 - Site content (resume text, contact details, titles, dates, meta description) is hand-written and hardcoded; job data lives in `src/lib/jobs.ts`. Never change or reword content unless specifically asked, even while refactoring or restyling.
 - Theme tokens (space/cobalt/azure/cyan/ice/amber) and fonts are defined in `src/routes/layout.css`; use them instead of raw hex. Dark theme only, no animation.
 - Icons and manifest are static files in `static/`, linked from `src/app.html`.

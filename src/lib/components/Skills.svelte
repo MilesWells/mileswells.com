@@ -30,10 +30,12 @@
 	>
 		Skills
 	</h2>
+
 	<dl class="mt-8 space-y-6">
 		{#each groups as group (group.name)}
 			<div>
 				<dt class="text-sm font-medium text-ice/80">{group.name}</dt>
+
 				<dd class="mt-2">
 					<ul role="list" class="flex flex-wrap gap-2">
 						{#each group.items as item (item)}

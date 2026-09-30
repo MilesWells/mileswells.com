@@ -5,6 +5,7 @@
 	>
 		Education
 	</h2>
+
 	<p class="mt-8 text-lg text-white">
 		B.S., Computer Science
 		<span class="text-ice/80">— North Carolina State University, 2016</span>

@@ -23,7 +23,9 @@
 </script>
 
 <div class="nebula" aria-hidden="true"></div>
+
 <div class="stars far" style:--shadow={far} aria-hidden="true"></div>
+
 <div class="stars near" style:--shadow={near} aria-hidden="true"></div>
 
 <style>

@@ -11,16 +11,24 @@
 
 <svelte:head>
 	<title>{title}</title>
+
 	<meta name="description" content={description} />
+
 	<meta property="og:type" content="website" />
+
 	<meta property="og:title" content={title} />
+
 	<meta property="og:description" content={description} />
+
 	<meta name="theme-color" content="#040816" />
 </svelte:head>
 
 <main>
 	<Hero />
+
 	<Experience />
+
 	<Skills />
+
 	<Education />
 </main>

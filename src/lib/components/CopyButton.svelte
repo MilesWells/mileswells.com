@@ -53,6 +53,7 @@
 		{/if}
 	</svg>
 </button>
+
 <span class="sr-only" role="status">
 	{messages[status]}
 </span>
