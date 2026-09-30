@@ -17,7 +17,7 @@
 		},
 		{
 			name: 'Data',
-			items: ['REST APIs', 'WebSockets', 'Elasticsearch', 'PostgreSQL', 'RabbitMQ']
+			items: ['REST APIs', 'WebSockets', 'PostgreSQL', 'Elasticsearch', 'RabbitMQ']
 		},
 		{ name: 'Auth', items: ['OAuth', 'OIDC', 'SAML'] }
 	];

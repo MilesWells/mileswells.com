@@ -9,7 +9,7 @@
 	};
 
 	let status = $state<Status>('idle');
-	let timer: ReturnType<typeof setTimeout> | undefined;
+	let timer: NodeJS.Timeout | undefined;
 
 	async function copy() {
 		clearTimeout(timer);
@@ -30,7 +30,7 @@
 	onclick={copy}
 	aria-label={label}
 	data-status={status}
-	class="flex items-center rounded-r-full border-l border-azure/30 py-2.5 pr-4 pl-3 text-azure hover:bg-cobalt/25 hover:text-cyan data-[status=copied]:text-cyan data-[status=failed]:text-amber"
+	class="flex cursor-pointer items-center rounded-r-full border-l border-azure/30 py-2.5 pr-4 pl-3 text-azure hover:bg-cobalt/25 hover:text-cyan data-[status=copied]:text-cyan data-[status=failed]:text-amber"
 >
 	<svg
 		class="size-4"

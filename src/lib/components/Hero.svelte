@@ -50,6 +50,8 @@
 		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
 			<a
 				href="https://linkedin.com/in/mileswells"
+				target="_blank"
+				rel="noopener noreferrer"
 				class="flex min-w-0 items-center gap-2 rounded-full py-2.5 pr-4 pl-4 text-azure hover:bg-cobalt/25 hover:text-cyan"
 			>
 				<svg

@@ -36,6 +36,7 @@
 		z-index: -1;
 		pointer-events: none;
 	}
+
 	.nebula {
 		background:
 			radial-gradient(60rem 40rem at 15% 10%, rgb(47 91 234 / 0.35), transparent 60%),
@@ -49,6 +50,17 @@
 				var(--color-space-950)
 			);
 	}
+
+	.stars {
+		mask-image: linear-gradient(
+			90deg,
+			#000 calc(50% - 32rem),
+			transparent calc(50% - 28rem),
+			transparent calc(50% + 28rem),
+			#000 calc(50% + 32rem)
+		);
+	}
+
 	.stars::after {
 		content: '';
 		position: absolute;
@@ -58,6 +70,7 @@
 		height: 1px;
 		box-shadow: var(--shadow);
 	}
+
 	.stars.near::after {
 		width: 2px;
 		height: 2px;
