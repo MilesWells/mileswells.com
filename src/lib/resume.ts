@@ -8,10 +8,6 @@ export type Job = {
 export type SkillGroup = { name: string; items: string[] };
 
 export const resume = {
-	name: 'Miles Wells',
-	location: 'Durham, NC',
-	summary:
-		'Staff Software Engineer with 10 years of full-stack experience, specializing in UI architecture and the integration layer between frontends and backend services. Spent seven years as the sole UI engineer at a robotics software company, owning front-end architecture, testing standards, performance, and UX partnership. TypeScript-first, with a rigorous approach to testing and a pragmatic approach to AI-assisted development.',
 	jobs: [
 		{
 			title: 'Staff Software Engineer',
@@ -70,10 +66,5 @@ export const resume = {
 			items: ['REST APIs', 'WebSockets', 'Elasticsearch', 'PostgreSQL', 'RabbitMQ']
 		},
 		{ name: 'Auth', items: ['OAuth', 'OIDC', 'SAML'] }
-	] satisfies SkillGroup[],
-	education: {
-		degree: 'B.S., Computer Science',
-		school: 'North Carolina State University',
-		year: '2016'
-	}
+	] satisfies SkillGroup[]
 };

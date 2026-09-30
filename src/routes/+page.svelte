@@ -3,10 +3,10 @@
 	import Experience from '$lib/components/Experience.svelte';
 	import Skills from '$lib/components/Skills.svelte';
 	import Education from '$lib/components/Education.svelte';
-	import { resume } from '$lib/resume';
 
-	const title = `${resume.name} — Staff Software Engineer`;
-	const description = resume.summary.split('. ')[0] + '.';
+	const title = 'Miles Wells — Staff Software Engineer';
+	const description =
+		'Staff Software Engineer with 10 years of full-stack experience, specializing in UI architecture and the integration layer between frontends and backend services.';
 </script>
 
 <svelte:head>

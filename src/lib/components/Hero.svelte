@@ -1,18 +1,23 @@
 <script lang="ts">
-	import { resume } from '$lib/resume';
 	import CopyButton from './CopyButton.svelte';
 </script>
 
 <header class="mx-auto max-w-4xl px-4 pt-20 pb-12 sm:px-6 sm:pt-32">
 	<p class="text-sm font-medium tracking-[0.2em] text-amber uppercase">
-		{resume.jobs[0].title} · {resume.location}
+		Staff Software Engineer · Durham, NC
 	</p>
 	<h1
 		class="mt-4 bg-linear-to-r from-white via-ice to-cyan bg-clip-text font-display text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
 	>
-		{resume.name}
+		Miles Wells
 	</h1>
-	<p class="mt-8 max-w-2xl text-lg leading-relaxed text-ice/90">{resume.summary}</p>
+	<p class="mt-8 max-w-2xl text-lg leading-relaxed text-ice/90">
+		Staff Software Engineer with 10 years of full-stack experience, specializing in UI architecture
+		and the integration layer between frontends and backend services. Spent seven years as the sole
+		UI engineer at a robotics software company, owning front-end architecture, testing standards,
+		performance, and UX partnership. TypeScript-first, with a rigorous approach to testing and a
+		pragmatic approach to AI-assisted development.
+	</p>
 	<div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
 		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
 			<a

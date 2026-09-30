@@ -1,7 +1,3 @@
-<script lang="ts">
-	import { resume } from '$lib/resume';
-</script>
-
 <section aria-labelledby="education-heading" class="mx-auto max-w-4xl px-4 py-12 pb-24 sm:px-6">
 	<h2
 		id="education-heading"
@@ -10,7 +6,7 @@
 		Education
 	</h2>
 	<p class="mt-8 text-lg text-white">
-		{resume.education.degree}
-		<span class="text-ice/80">— {resume.education.school}, {resume.education.year}</span>
+		B.S., Computer Science
+		<span class="text-ice/80">— North Carolina State University, 2016</span>
 	</p>
 </section>
