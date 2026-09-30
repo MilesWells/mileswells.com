@@ -14,9 +14,9 @@
 	<p class="mt-8 max-w-2xl text-lg leading-relaxed text-ice/90">
 		Staff Software Engineer with 10 years of full-stack experience, specializing in UI architecture
 		and the integration layer between frontends and backend services. Spent seven years as the sole
-		UI engineer at a robotics software company, owning front-end architecture, testing standards,
-		performance, and UX partnership. TypeScript-first, with a rigorous approach to testing and a
-		pragmatic approach to AI-assisted development.
+		UI engineer at a robotics integrations software company, owning front-end architecture, testing
+		standards, performance, and design-driven UX. TypeScript-first, with a rigorous approach to
+		testing and a pragmatic approach to AI-assisted development.
 	</p>
 	<div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
 		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
