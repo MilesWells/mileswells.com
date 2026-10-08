@@ -3,15 +3,27 @@
 </script>
 
 <header class="mx-auto max-w-4xl px-4 pt-20 sm:px-6 sm:pt-32">
-	<p class="text-sm font-medium tracking-[0.2em] text-amber uppercase">
-		Staff Software Engineer · Durham, NC
-	</p>
+	<div class="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
+		<img
+			src="/profile.png"
+			alt="Miles Wells holding a cat"
+			width="400"
+			height="400"
+			class="size-28 shrink-0 rounded-full object-cover ring-2 ring-azure/60 ring-offset-4 ring-offset-space-950 sm:size-40"
+		/>
 
-	<h1
-		class="mt-4 bg-linear-to-r from-white via-ice to-cyan bg-clip-text font-display text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
-	>
-		Miles Wells
-	</h1>
+		<div>
+			<p class="text-sm font-medium tracking-[0.2em] text-amber uppercase">
+				Staff Software Engineer · Durham, NC
+			</p>
+
+			<h1
+				class="mt-4 bg-linear-to-r from-white via-ice to-cyan bg-clip-text font-display text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
+			>
+				Miles Wells
+			</h1>
+		</div>
+	</div>
 
 	<p class="mt-8 max-w-2xl text-lg leading-relaxed text-ice/90">
 		Staff Software Engineer with 10 years of full-stack experience, specializing in UI architecture
