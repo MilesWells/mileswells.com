@@ -1,5 +1,9 @@
 <script lang="ts">
 	import CopyButton from './CopyButton.svelte';
+	import DownloadIcon from './icons/DownloadIcon.svelte';
+	import LinkedInIcon from './icons/LinkedInIcon.svelte';
+	import MailIcon from './icons/MailIcon.svelte';
+	import Pill from './Pill.svelte';
 	import { asset } from '$app/paths';
 	import profile from '$lib/assets/profile.webp';
 </script>
@@ -36,82 +40,42 @@
 	</p>
 
 	<div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
-		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
+		<Pill>
 			<a
 				href="mailto:milescwells@pm.me"
 				class="flex min-w-0 items-center gap-2 rounded-l-full py-2.5 pr-3 pl-4 text-azure hover:bg-cobalt/25 hover:text-cyan"
 			>
-				<svg
-					class="size-4 shrink-0"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					aria-hidden="true"
-				>
-					<rect width="20" height="16" x="2" y="4" rx="2" />
-					<path d="m22 7-10 6L2 7" />
-				</svg>
+				<MailIcon />
 
 				<span class="break-all">milescwells@pm.me</span>
 			</a>
 
 			<CopyButton text="milescwells@pm.me" label="Copy email address" />
-		</span>
+		</Pill>
 
-		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
+		<Pill>
 			<a
 				href="https://linkedin.com/in/mileswells"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="flex min-w-0 items-center gap-2 rounded-full py-2.5 pr-4 pl-4 text-azure hover:bg-cobalt/25 hover:text-cyan"
 			>
-				<svg
-					class="size-4 shrink-0"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					aria-hidden="true"
-				>
-					<path
-						d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-					/>
-					<rect width="4" height="12" x="2" y="9" />
-					<circle cx="4" cy="4" r="2" />
-				</svg>
+				<LinkedInIcon />
 
 				<span class="break-all">Connect</span>
 			</a>
-		</span>
+		</Pill>
 
-		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
+		<Pill>
 			<a
 				href={asset('/miles-wells-resume.pdf')}
 				download
 				class="flex min-w-0 items-center gap-2 rounded-full py-2.5 pr-4 pl-4 text-azure hover:bg-cobalt/25 hover:text-cyan"
 			>
-				<svg
-					class="size-4 shrink-0"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					aria-hidden="true"
-				>
-					<path d="M12 15V3" />
-					<path d="m7 10 5 5 5-5" />
-					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-				</svg>
+				<DownloadIcon />
 
-				<span class="break-all">Download resume</span>
+				<span>Resume<span class="sr-only"> (PDF download)</span></span>
 			</a>
-		</span>
+		</Pill>
 	</div>
 </header>
