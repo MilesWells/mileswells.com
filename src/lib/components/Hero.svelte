@@ -5,10 +5,10 @@
 <header class="mx-auto max-w-4xl px-4 pt-20 sm:px-6 sm:pt-32">
 	<div class="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
 		<img
-			src="/profile.png"
+			src="/profile.webp"
 			alt="Miles Wells holding a cat"
-			width="400"
-			height="400"
+			width="320"
+			height="320"
 			class="size-28 shrink-0 rounded-full object-cover ring-2 ring-azure/60 ring-offset-4 ring-offset-space-950 sm:size-40"
 		/>
 
