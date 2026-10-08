@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CopyButton from './CopyButton.svelte';
+	import { asset } from '$app/paths';
 	import profile from '$lib/assets/profile.webp';
 </script>
 
@@ -85,6 +86,31 @@
 				</svg>
 
 				<span class="break-all">Connect</span>
+			</a>
+		</span>
+
+		<span class="inline-flex max-w-full rounded-full border border-azure/30 bg-cobalt/15">
+			<a
+				href={asset('/miles-wells-resume.pdf')}
+				download
+				class="flex min-w-0 items-center gap-2 rounded-full py-2.5 pr-4 pl-4 text-azure hover:bg-cobalt/25 hover:text-cyan"
+			>
+				<svg
+					class="size-4 shrink-0"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<path d="M12 15V3" />
+					<path d="m7 10 5 5 5-5" />
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+				</svg>
+
+				<span class="break-all">Download resume</span>
 			</a>
 		</span>
 	</div>
