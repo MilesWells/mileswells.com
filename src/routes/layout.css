@@ -1,6 +1,40 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/inter';
-@import '@fontsource-variable/space-grotesk';
+
+@font-face {
+	font-family: 'Inter Variable';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100 900;
+	src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2')
+		format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Space Grotesk Variable';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300 700;
+	src: url('@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2')
+		format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Inter Fallback';
+	src: local('Arial'), local('Liberation Sans'), local('Arimo');
+	size-adjust: 107.12%;
+	ascent-override: 90.44%;
+	descent-override: 22.52%;
+	line-gap-override: 0%;
+}
+
+@font-face {
+	font-family: 'Space Grotesk Fallback';
+	src: local('Arial'), local('Liberation Sans'), local('Arimo');
+	size-adjust: 109.69%;
+	ascent-override: 89.71%;
+	descent-override: 26.62%;
+	line-gap-override: 0%;
+}
 
 @theme {
 	--color-space-950: #040816;
@@ -10,8 +44,10 @@
 	--color-cyan: #5ce1ff;
 	--color-ice: #cfe8ff;
 	--color-amber: #ffb066;
-	--font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
-	--font-display: 'Space Grotesk Variable', 'Inter Variable', ui-sans-serif, sans-serif;
+	--font-sans: 'Inter Variable', 'Inter Fallback', ui-sans-serif, system-ui, sans-serif;
+	--font-display:
+		'Space Grotesk Variable', 'Space Grotesk Fallback', 'Inter Variable', 'Inter Fallback',
+		ui-sans-serif, sans-serif;
 }
 
 @layer base {
