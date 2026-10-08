@@ -1,11 +1,12 @@
 <script lang="ts">
 	import CopyButton from './CopyButton.svelte';
+	import profile from '$lib/assets/profile.webp';
 </script>
 
 <header class="mx-auto max-w-4xl px-4 pt-20 sm:px-6 sm:pt-32">
 	<div class="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
 		<img
-			src="/profile.webp"
+			src={profile}
 			alt="Miles Wells holding a cat"
 			width="320"
 			height="320"
